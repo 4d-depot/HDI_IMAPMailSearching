@@ -1,0 +1,2610 @@
+148	2020-09-09T10:39:40.339	1	3	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+149	2020-09-09T10:39:40.339	1	3	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+150	2020-09-09T10:39:40.339	1	3	C > "A001 CAPABILITY"
+151	2020-09-09T10:39:40.342	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 LOGINDISABLED STARTTLS AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+152	2020-09-09T10:39:40.342	1	3	S < "A001 OK CAPABILITY completed."
+153	2020-09-09T10:39:40.342	1	3	C > "A002 STARTTLS"
+154	2020-09-09T10:39:40.345	1	3	S < "A002 OK Begin TLS negotiation now."
+155	2020-09-09T10:39:40.345	1	3	### IMAP Encrypted TLS session started.
+156	2020-09-09T10:39:40.420	1	3	C > "A003 CAPABILITY"
+157	2020-09-09T10:39:40.427	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 AUTH=PLAIN AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+158	2020-09-09T10:39:40.428	1	3	S < "A003 OK CAPABILITY completed."
+159	2020-09-09T10:39:40.428	1	3	C > "A004 AUTHENTICATE PLAIN"
+160	2020-09-09T10:39:40.431	1	3	S < "+ "
+161	2020-09-09T10:39:40.431	1	3	C > "************************************************"
+162	2020-09-09T10:39:40.580	1	3	S < "A004 OK AUTHENTICATE completed."
+163	2020-09-09T10:39:41.750	1	3	C > "A005 SELECT INBOX"
+164	2020-09-09T10:39:42.298	1	3	S < "* 17729 EXISTS"
+165	2020-09-09T10:39:42.298	1	3	S < "* 1 RECENT"
+166	2020-09-09T10:39:42.298	1	3	S < "* FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)"
+167	2020-09-09T10:39:42.298	1	3	S < "* OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags"
+168	2020-09-09T10:39:42.298	1	3	S < "* OK [UNSEEN 17691] Is the first unseen message"
+169	2020-09-09T10:39:42.298	1	3	S < "* OK [UIDVALIDITY 14] UIDVALIDITY value"
+170	2020-09-09T10:39:42.298	1	3	S < "* OK [UIDNEXT 41537] The next unique identifier value"
+171	2020-09-09T10:39:42.298	1	3	S < "A005 OK [READ-WRITE] SELECT completed."
+172	2020-09-09T10:39:42.408	1	3	C > "A006 FETCH 17719:17729 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER])"
+173	2020-09-09T10:39:42.508	1	3	S < "* 17719 FETCH (UID 41513 INTERNALDATE "09-Sep-2020 00:54:03 +0200" RFC822.SIZE 22441 BODY[HEADER] {2539}"
+174	2020-09-09T10:39:42.508	1	3	S < Message data (29819 bytes)
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 00:54:03 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 00:54:03 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 00:54:03 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id AIPmOldh03RwKLPI (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 00:54:02 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:9::2ca:e017:ac1b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id A4B5B60636
+	for <fabrice.mainguene@4d.com>; Tue,  8 Sep 2020 22:54:02 +0000 (UTC)
+From: Belanger.Chris via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsg==
+Date: Wed, 9 Sep 2020 00:54:02 +0200
+Message-ID: <topic/15499@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/41bb82a8afdba6eb91c27fc9cf8e74d271104f609fc301eae212b8891bdead8e>
+Reply-To: 4D Forum <x4d+6e27ce4ec46cb18a9c43c26279ed7ea7@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	4e860523-d19a-432c-e712-08d8544a1539
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <6803DC9EBE580743A6EEA91F8F831C83@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17720 FETCH (UID 41514 INTERNALDATE "09-Sep-2020 01:24:13 +0200" RFC822.SIZE 20840 BODY[HEADER] {2630}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id 7DNf9EfA7Ew08GiU (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 01:24:12 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id DFDA14DD6
+	for <fabrice.mainguene@4d.com>; Tue,  8 Sep 2020 23:24:11 +0000 (UTC)
+From: Kirk Brooks via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsqlfQGOA
+Date: Wed, 9 Sep 2020 01:24:11 +0200
+Message-ID: <topic/15499/39928@discuss.4d.com>
+References: <topic/15499@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/6fdf2e688841ae43f6f0dc5d62a905a7e7cf392ec11164007d64310a6b68695b>
+In-Reply-To: <topic/15499@discuss.4d.com>
+Reply-To: 4D Forum <x4d+9a7b001de6351b93312730b80fc328de@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c339e033-2fe1-4b9a-390f-08d8544e4c1e
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <84DF1390B5E1E54988B21FAF5412159C@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17721 FETCH (UID 41515 INTERNALDATE "09-Sep-2020 03:00:35 +0200" RFC822.SIZE 20550 BODY[HEADER] {2557}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 03:00:35 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 03:00:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 03:00:34 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id FbVMOlpjOHOyHaYh (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 03:00:34 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 3A7BF6156D
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 01:00:34 +0000 (UTC)
+From: mikey via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] WYSIWYG Form Editor in Project Mode[Feature Request]
+Thread-Topic: [4D Forum] WYSIWYG Form Editor in Project Mode[Feature Request]
+Thread-Index: AQHWhkSfHTfQy+G0rE2iQ0mrZiwdfg==
+Date: Wed, 9 Sep 2020 03:00:34 +0200
+Message-ID: <topic/14685/39931@discuss.4d.com>
+References: <topic/14685@discuss.4d.com> <topic/14685/36155@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/1ef0b713faaefefd9d77b9bb939afb06010394054fd344f48826988f0e0b168a>
+In-Reply-To: <topic/14685/36155@discuss.4d.com>
+Reply-To: 4D Forum <x4d+042449f6f99c8f8ab464d5d3e7dbbe6d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	474fc329-87b4-4e7a-f906-08d8545bc22d
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EB56767FAF600C41823D246E8FF34475@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17722 FETCH (UID 41516 INTERNALDATE "09-Sep-2020 03:01:46 +0200" RFC822.SIZE 18370 BODY[HEADER] {2477}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id S8bHGUCPCCJxH48x (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 03:01:45 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AB6D06150F
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 01:01:45 +0000 (UTC)
+From: mikey via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Triggers in project mode[Beta]
+Thread-Topic: [4D Forum] Triggers in project mode[Beta]
+Thread-Index: AQHWhd+sOTssvEDuiU+i2Td0b1OANqlfXEyA
+Date: Wed, 9 Sep 2020 03:01:45 +0200
+Message-ID: <topic/15483/39932@discuss.4d.com>
+References: <topic/15483@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/44c343d2aef1f12741aed9b24e83fc10257e3ec9e0218c864775c2c8094f2d09>
+In-Reply-To: <topic/15483@discuss.4d.com>
+Reply-To: 4D Forum <x4d+861216a7ece7e41d7353143c92f31569@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	59a3e395-0888-4db2-c402-08d8545bec99
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <67711CD281D07A4DB88725295947B7C5@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17723 FETCH (UID 41517 INTERNALDATE "09-Sep-2020 05:27:23 +0200" RFC822.SIZE 25897 BODY[HEADER] {2682}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KmgidDub4zrpZG0j (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 05:27:22 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 2122061696
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 03:27:22 +0000 (UTC)
+From: Belanger.Chris via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsqlfQGOAgABD8gA=
+Date: Wed, 9 Sep 2020 05:27:22 +0200
+Message-ID: <topic/15499/39934@discuss.4d.com>
+References: <topic/15499@discuss.4d.com> <topic/15499/39928@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/1380684b6f3b15c0caf2e3a55fb383df28a6162fac71bcbbeee176acb5ad2bfe>
+In-Reply-To: <topic/15499/39928@discuss.4d.com>
+Reply-To: 4D Forum <x4d+414620f344a9dbfa84f576236b2ac77c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	aec82265-dde9-4119-2931-08d8547043e5
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <195AADB17A3C5144AA2DBBBEB7D56F72@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17724 FETCH (UID 41518 INTERNALDATE "09-Sep-2020 07:26:39 +0200" RFC822.SIZE 21606 BODY[HEADER] {2624}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id HUc2RBDEr7WzPmAu (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:26:38 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:3::2b3:c6e0:8d82])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 4A7F74233
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:26:38 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] St get plain text in thread safe manner[English Community]
+Thread-Topic: [4D Forum] St get plain text in thread safe manner[English
+ Community]
+Thread-Index: AQHWhgWpLrDkkdgAgUSykqgHhUnzkKle/gCAgACoAgA=
+Date: Wed, 9 Sep 2020 07:26:38 +0200
+Message-ID: <topic/15491/39936@discuss.4d.com>
+References: <topic/15491@discuss.4d.com>
+ <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/206bd5d3cd8b6ed8d6baebb872e611c3db31bc8293ad375cbe4564be036a5556>
+In-Reply-To: <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+Reply-To: 4D Forum <x4d+77b0a8ba3a336d0fd1d1b7f13ae2fbaa@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c6a88f65-8fb6-443c-06a2-08d85480ed82
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <2BFEB93F1EF05E4683025814E6EB7BDB@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17725 FETCH (UID 41519 INTERNALDATE "09-Sep-2020 07:33:47 +0200" RFC822.SIZE 21449 BODY[HEADER] {2699}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id TTPm26uNK9E8bngw (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:33:46 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 150C344C4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:33:46 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIA
+Date: Wed, 9 Sep 2020 07:33:46 +0200
+Message-ID: <topic/15488/39937@discuss.4d.com>
+References: <topic/15488@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/e0fad1ceed3290f4db413b4a7ea441fa0bd8b9f70a984268b8ccdea19e81f369>
+In-Reply-To: <topic/15488@discuss.4d.com>
+Reply-To: 4D Forum <x4d+312f135363a5eaea06ed769d649e673c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a3ada2bb-0ed7-478c-e404-08d85481ecc9
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <9A4EDFB361F9A944895510D40354E92F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17726 FETCH (UID 41532 INTERNALDATE "09-Sep-2020 08:03:24 +0200" RFC822.SIZE 33824 BODY[HEADER] {2373}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from 69-171-232-173.mail-work-camp.facebook.com (69-171-232-173.mail-work-camp.facebook.com [69.171.232.173]) by barracuda.waycom.net with ESMTP id d1zZDhZavXkHiFY8 (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 08:03:22 +0200 (CEST)
+From: 4D via Workplace <notification@fbworkmail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Topic:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Index: AQHWhm7tjtQA8VoIykigM6sJY6REbA==
+Date: Wed, 9 Sep 2020 08:03:09 +0200
+Message-ID:
+	<22aaabc8f26211eab09898039bb2628c-ceb3c9e0@c3e7cb3ac76d8adae6acda24fc59d036ac77564b6e6e0fd1cd6c102cd931f66d>
+List-Unsubscribe:
+	<https://4d-fr.workplace.com/o.php?k=AS0wW5IeGu7_96lF&u=100015201798400&mid=5aedaeb190964G5af69a934900G5aedb34af0c36G9fd>
+Reply-To: noreply <noreply@fbworkmail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	cd47452e-fd2e-48a6-5f2d-08d854860f9c
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EE119DAC3348FF44A8407EA1B765B237@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17727 FETCH (UID 41534 INTERNALDATE "09-Sep-2020 09:49:34 +0200" RFC822.SIZE 55331 BODY[HEADER] {2981}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EUR01-VE1-obe.outbound.protection.outlook.com (mail-oln040092066091.outbound.protection.outlook.com [40.92.66.91]) by barracuda.waycom.net with ESMTP id YVN8Lb5CBNGVcwvv (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO); Wed, 09 Sep 2020 09:49:33 +0200 (CEST)
+Received: from HE1EUR01FT033.eop-EUR01.prod.protection.outlook.com
+ (2a01:111:e400:7e18::52) by
+ HE1EUR01HT083.eop-EUR01.prod.protection.outlook.com (2a01:111:e400:7e18::312)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16; Wed, 9 Sep
+ 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM (2a01:111:e400:7e18::4c)
+ by HE1EUR01FT033.mail.protection.outlook.com (2a01:111:e400:7e18::178) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16 via Frontend
+ Transport; Wed, 9 Sep 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52]) by SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52%8]) with mapi id 15.20.3370.016; Wed, 9 Sep 2020
+ 07:49:32 +0000
+From: clare duncumb <clareduncumb@hotmail.com>
+To: Djompolo Tandjigora <Djompolo.Tandjigora@4d.com>, Mohamed Bakiz
+	<Mohamed.Bakiz@4d.com>, Damien Fuzeau <Damien.Fuzeau@4d.com>,
+	=?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>, Vincent
+ Laluque <Vincent.Laluque@4d.com>
+Subject: English
+Thread-Topic: English
+Thread-Index: AQHWhn0362F0tGS+6U2P1ON8N5ILYQ==
+Date: Wed, 9 Sep 2020 09:49:32 +0200
+Message-ID:
+	<SVAP279MB0031E934E2D4F6326BE421E6D0260@SVAP279MB0031.NORP279.PROD.OUTLOOK.COM>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	eb2d362a-b218-4c24-400e-08d85494e4cb
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+Content-Type: multipart/mixed;
+	boundary="_002_SVAP279MB0031E934E2D4F6326BE421E6D0260SVAP279MB0031NORP_"
+
+)
+* 17728 FETCH (UID 41535 INTERNALDATE "09-Sep-2020 10:05:31 +0200" RFC822.SIZE 18925 BODY[HEADER] {2565}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KxoNAA0A67oeFKUK (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:05:30 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id B603D61992
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:05:30 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Entity.lock() in zwei Prozessen[German Community/German 4D
+ Partners]
+Thread-Topic: [4D Forum] Entity.lock() in zwei Prozessen[German
+ Community/German 4D Partners]
+Thread-Index: AQHWhn/8GF9Vg0PoLUq/1fU3YwzNhA==
+Date: Wed, 9 Sep 2020 10:05:30 +0200
+Message-ID: <topic/15184/39952@discuss.4d.com>
+References: <topic/15184@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/932d63117db0df326628feff49ea7073896a6c46521c623c398e2bd1f0e76ca2>
+In-Reply-To: <topic/15184@discuss.4d.com>
+Reply-To: 4D Forum <x4d+ffdd554bbdb65037dadbe22b01d4f3b1@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	0b6bd5aa-b0dd-408d-8155-08d854971f33
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <131DC7AFD7512E42B9AE828B69994BB4@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17729 FETCH (UID 41536 INTERNALDATE "09-Sep-2020 10:26:02 +0200" RFC822.SIZE 21540 BODY[HEADER] {2573}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:26:02 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id OCsKF0wSUzkaSvVd (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:26:01 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 2CB0F4ED4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:26:01 +0000 (UTC)
+From: Laurent Esnault via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Topic: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Index: AQHWhgcudBzSoPPkcU+wVaaM+Lzzyale550AgADwgIA=
+Date: Wed, 9 Sep 2020 10:26:01 +0200
+Message-ID: <topic/15492/39954@discuss.4d.com>
+References: <topic/15492@discuss.4d.com> <topic/15492/39894@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/4aba4ee7e5d7b9805c29b61bec7f2dd499e3024a22774ad459b05e4f4ac9d27d>
+In-Reply-To: <topic/15492/39894@discuss.4d.com>
+Reply-To: 4D Forum <x4d+7cb0376cb480778893aa34f63d94da8d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	790c6a33-c1db-4880-1cba-08d85499fc9b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0A66818784AC5A489ADBC66E6862C188@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+A006 OK FETCH completed.
+
+175	2020-09-09T10:39:42.517	1	3	C > "A007 UID FETCH 41536 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[])"
+176	2020-09-09T10:39:42.529	1	3	S < "* 17729 FETCH (UID 41536 INTERNALDATE "09-Sep-2020 10:26:02 +0200" RFC822.SIZE 21540 BODY[] {4363}"
+177	2020-09-09T10:39:42.531	1	3	S < Message data (4392 bytes)
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:26:02 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id OCsKF0wSUzkaSvVd (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:26:01 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 2CB0F4ED4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:26:01 +0000 (UTC)
+From: Laurent Esnault via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Topic: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Index: AQHWhgcudBzSoPPkcU+wVaaM+Lzzyale550AgADwgIA=
+Date: Wed, 9 Sep 2020 10:26:01 +0200
+Message-ID: <topic/15492/39954@discuss.4d.com>
+References: <topic/15492@discuss.4d.com> <topic/15492/39894@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/4aba4ee7e5d7b9805c29b61bec7f2dd499e3024a22774ad459b05e4f4ac9d27d>
+In-Reply-To: <topic/15492/39894@discuss.4d.com>
+Reply-To: 4D Forum <x4d+7cb0376cb480778893aa34f63d94da8d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	790c6a33-c1db-4880-1cba-08d85499fc9b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0A66818784AC5A489ADBC66E6862C188@4d.com>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+
+W2h0dHBzOi8vZHViMi5kaXNjb3Vyc2UtY2RuLmNvbS9idXNpbmVzczIwL3VzZXJfYXZhdGFyL2Rp
+c2N1c3MuNGQuY29tL2xlc25hdWx0LzQ1LzU1N18yLnBuZ10gICAgbGVzbmF1bHQ8aHR0cHM6Ly9k
+aXNjdXNzLjRkLmNvbS91L2xlc25hdWx0PiA0RCBTdGFmZg0KU2VwdGVtYmVyIDkNCg0KYm9uam91
+ciwNCg0KaXNGaWxlIGV0IGlzRm9sZGVyIHJldG91cm5lbnQgdG91am91cnMgdHJ1ZSBwb3VyIHVu
+IG9iamV0IEZpbGUgb3UgRm9sZGVyLCByZXNwZWN0aXZlbWVudC4NCklsIGZhdXQgYXBwZWxlciBl
+eGlzdHMoKSBwb3VyIHbDqXJpZmllciBzdXIgbGUgZGlzcXVlIHNpIHVuIGZpY2hpZXIgb3UgdW4g
+ZG9zc2llciBhdmVjIGxlIGNoZW1pbiBkb25uw6kgZXhpc3RlIGVmZmVjdGl2ZW1lbnQuDQoNCl9f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fDQoNClZpc2l0IFRvcGljPGh0dHBzOi8vZGlz
+Y3Vzcy40ZC5jb20vdC9mb25jdGlvbi1maWxlLWV0LWxlcy1kb3NzaWVycy8xNTQ5Mi8zPiBvciBy
+ZXBseSB0byB0aGlzIGVtYWlsIHRvIHJlc3BvbmQuDQoNCl9fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fDQpJbiBSZXBseSBUbw0KW2h0dHBzOi8vZHViMi5kaXNjb3Vyc2UtY2RuLmNvbS9i
+dXNpbmVzczIwL3VzZXJfYXZhdGFyL2Rpc2N1c3MuNGQuY29tL2JlcnRyYW5kLnNvdWJleXJhbmQv
+NDUvMTEzOF8yLnBuZ10gICAgICAgIEJlcnRyYW5kLlNPVUJFWVJBTkQ8aHR0cHM6Ly9kaXNjdXNz
+LjRkLmNvbS91L2JlcnRyYW5kLnNvdWJleXJhbmQ+IFBhcnRuZXJzDQpTZXB0ZW1iZXIgOA0KRXQg
+cXVhbmQgamUgcGFzc2UgdW4gZmljaGllciDDoCBGb2xkZXIsIMOnYSBuZSBwbGFudGUgcGFzIG1h
+aXMgaXNGb2xkZXIgZXN0IFZyYWkgZXQgaXNGaWxlIGVzdCBGYXV4ICEhISBWYSBzYXZvaXIgQ2hh
+cmxlcyA6c2xpZ2h0X3NtaWxlOg0KX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCg0K
+VmlzaXQgVG9waWM8aHR0cHM6Ly9kaXNjdXNzLjRkLmNvbS90L2ZvbmN0aW9uLWZpbGUtZXQtbGVz
+LWRvc3NpZXJzLzE1NDkyLzM+IG9yIHJlcGx5IHRvIHRoaXMgZW1haWwgdG8gcmVzcG9uZC4NCg0K
+WW91IGFyZSByZWNlaXZpbmcgdGhpcyBiZWNhdXNlIHlvdSBlbmFibGVkIG1haWxpbmcgbGlzdCBt
+b2RlLg0KDQpUbyB1bnN1YnNjcmliZSBmcm9tIHRoZXNlIGVtYWlscywgY2xpY2sgaGVyZTxodHRw
+czovL2Rpc2N1c3MuNGQuY29tL2VtYWlsL3Vuc3Vic2NyaWJlLzRhYmE0ZWU3ZTVkN2I5ODA1YzI5
+YjYxYmVjN2YyZGQ0OTllMzAyNGEyMjc3NGFkNDU5YjA1ZTRmNGFjOWQyN2Q+Lg0KDQoNCg==
+)
+A007 OK FETCH completed.
+
+178	2020-09-09T10:39:42.531	1	3	S < "A007 OK FETCH completed."
+179	2020-09-09T10:39:49.880	1	3	C > "A008 UID SEARCH CHARSET UTF-8 SUBJECT "test" "
+180	2020-09-09T10:39:49.885	1	3	S < "A008 NO [BADCHARSET (US-ASCII)] The specified charset is not supported."
+181	2020-09-09T10:44:19.127	1	3	C > "A009 CLOSE"
+182	2020-09-09T10:44:19.130	1	3	S < "A009 OK CLOSE completed."
+183	2020-09-09T10:44:19.131	1	3	C > "A010 LOGOUT"
+184	2020-09-09T10:44:19.134	1	3	S < "* BYE Microsoft Exchange Server 2016 IMAP4 server signing off."
+185	2020-09-09T10:44:19.134	1	3	### IMAP Connection closed
+186	2020-09-09T10:45:27.228	1	3	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+187	2020-09-09T10:45:27.228	1	3	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+188	2020-09-09T10:45:27.228	1	3	C > "A001 CAPABILITY"
+189	2020-09-09T10:45:27.233	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 LOGINDISABLED STARTTLS AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+190	2020-09-09T10:45:27.233	1	3	S < "A001 OK CAPABILITY completed."
+191	2020-09-09T10:45:27.233	1	3	C > "A002 STARTTLS"
+192	2020-09-09T10:45:27.236	1	3	S < "A002 OK Begin TLS negotiation now."
+193	2020-09-09T10:45:27.236	1	3	### IMAP Encrypted TLS session started.
+194	2020-09-09T10:45:27.271	1	3	C > "A003 CAPABILITY"
+195	2020-09-09T10:45:27.274	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 AUTH=PLAIN AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+196	2020-09-09T10:45:27.274	1	3	S < "A003 OK CAPABILITY completed."
+197	2020-09-09T10:45:27.274	1	3	C > "A004 AUTHENTICATE PLAIN"
+198	2020-09-09T10:45:27.277	1	3	S < "+ "
+199	2020-09-09T10:45:27.277	1	3	C > "************************************************"
+200	2020-09-09T10:45:27.428	1	3	S < "A004 OK AUTHENTICATE completed."
+201	2020-09-09T10:45:29.178	1	3	C > "A005 SELECT INBOX"
+202	2020-09-09T10:45:29.735	1	3	S < "* 17730 EXISTS"
+203	2020-09-09T10:45:29.735	1	3	S < "* 1 RECENT"
+204	2020-09-09T10:45:29.735	1	3	S < "* FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)"
+205	2020-09-09T10:45:29.735	1	3	S < "* OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags"
+206	2020-09-09T10:45:29.735	1	3	S < "* OK [UNSEEN 17691] Is the first unseen message"
+207	2020-09-09T10:45:29.735	1	3	S < "* OK [UIDVALIDITY 14] UIDVALIDITY value"
+208	2020-09-09T10:45:29.735	1	3	S < "* OK [UIDNEXT 41538] The next unique identifier value"
+209	2020-09-09T10:45:29.735	1	3	S < "A005 OK [READ-WRITE] SELECT completed."
+210	2020-09-09T10:45:29.816	1	3	C > "A006 FETCH 17720:17730 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER])"
+211	2020-09-09T10:45:29.894	1	3	S < "* 17720 FETCH (UID 41514 INTERNALDATE "09-Sep-2020 01:24:13 +0200" RFC822.SIZE 20840 BODY[HEADER] {2630}"
+212	2020-09-09T10:45:29.894	1	3	S < Message data (28900 bytes)
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 01:24:13 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id 7DNf9EfA7Ew08GiU (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 01:24:12 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id DFDA14DD6
+	for <fabrice.mainguene@4d.com>; Tue,  8 Sep 2020 23:24:11 +0000 (UTC)
+From: Kirk Brooks via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsqlfQGOA
+Date: Wed, 9 Sep 2020 01:24:11 +0200
+Message-ID: <topic/15499/39928@discuss.4d.com>
+References: <topic/15499@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/6fdf2e688841ae43f6f0dc5d62a905a7e7cf392ec11164007d64310a6b68695b>
+In-Reply-To: <topic/15499@discuss.4d.com>
+Reply-To: 4D Forum <x4d+9a7b001de6351b93312730b80fc328de@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c339e033-2fe1-4b9a-390f-08d8544e4c1e
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <84DF1390B5E1E54988B21FAF5412159C@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17721 FETCH (UID 41515 INTERNALDATE "09-Sep-2020 03:00:35 +0200" RFC822.SIZE 20550 BODY[HEADER] {2557}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 03:00:35 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 03:00:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 03:00:34 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id FbVMOlpjOHOyHaYh (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 03:00:34 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 3A7BF6156D
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 01:00:34 +0000 (UTC)
+From: mikey via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] WYSIWYG Form Editor in Project Mode[Feature Request]
+Thread-Topic: [4D Forum] WYSIWYG Form Editor in Project Mode[Feature Request]
+Thread-Index: AQHWhkSfHTfQy+G0rE2iQ0mrZiwdfg==
+Date: Wed, 9 Sep 2020 03:00:34 +0200
+Message-ID: <topic/14685/39931@discuss.4d.com>
+References: <topic/14685@discuss.4d.com> <topic/14685/36155@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/1ef0b713faaefefd9d77b9bb939afb06010394054fd344f48826988f0e0b168a>
+In-Reply-To: <topic/14685/36155@discuss.4d.com>
+Reply-To: 4D Forum <x4d+042449f6f99c8f8ab464d5d3e7dbbe6d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	474fc329-87b4-4e7a-f906-08d8545bc22d
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EB56767FAF600C41823D246E8FF34475@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17722 FETCH (UID 41516 INTERNALDATE "09-Sep-2020 03:01:46 +0200" RFC822.SIZE 18370 BODY[HEADER] {2477}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id S8bHGUCPCCJxH48x (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 03:01:45 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AB6D06150F
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 01:01:45 +0000 (UTC)
+From: mikey via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Triggers in project mode[Beta]
+Thread-Topic: [4D Forum] Triggers in project mode[Beta]
+Thread-Index: AQHWhd+sOTssvEDuiU+i2Td0b1OANqlfXEyA
+Date: Wed, 9 Sep 2020 03:01:45 +0200
+Message-ID: <topic/15483/39932@discuss.4d.com>
+References: <topic/15483@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/44c343d2aef1f12741aed9b24e83fc10257e3ec9e0218c864775c2c8094f2d09>
+In-Reply-To: <topic/15483@discuss.4d.com>
+Reply-To: 4D Forum <x4d+861216a7ece7e41d7353143c92f31569@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	59a3e395-0888-4db2-c402-08d8545bec99
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <67711CD281D07A4DB88725295947B7C5@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17723 FETCH (UID 41517 INTERNALDATE "09-Sep-2020 05:27:23 +0200" RFC822.SIZE 25897 BODY[HEADER] {2682}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KmgidDub4zrpZG0j (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 05:27:22 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 2122061696
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 03:27:22 +0000 (UTC)
+From: Belanger.Chris via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsqlfQGOAgABD8gA=
+Date: Wed, 9 Sep 2020 05:27:22 +0200
+Message-ID: <topic/15499/39934@discuss.4d.com>
+References: <topic/15499@discuss.4d.com> <topic/15499/39928@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/1380684b6f3b15c0caf2e3a55fb383df28a6162fac71bcbbeee176acb5ad2bfe>
+In-Reply-To: <topic/15499/39928@discuss.4d.com>
+Reply-To: 4D Forum <x4d+414620f344a9dbfa84f576236b2ac77c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	aec82265-dde9-4119-2931-08d8547043e5
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <195AADB17A3C5144AA2DBBBEB7D56F72@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17724 FETCH (UID 41518 INTERNALDATE "09-Sep-2020 07:26:39 +0200" RFC822.SIZE 21606 BODY[HEADER] {2624}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id HUc2RBDEr7WzPmAu (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:26:38 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:3::2b3:c6e0:8d82])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 4A7F74233
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:26:38 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] St get plain text in thread safe manner[English Community]
+Thread-Topic: [4D Forum] St get plain text in thread safe manner[English
+ Community]
+Thread-Index: AQHWhgWpLrDkkdgAgUSykqgHhUnzkKle/gCAgACoAgA=
+Date: Wed, 9 Sep 2020 07:26:38 +0200
+Message-ID: <topic/15491/39936@discuss.4d.com>
+References: <topic/15491@discuss.4d.com>
+ <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/206bd5d3cd8b6ed8d6baebb872e611c3db31bc8293ad375cbe4564be036a5556>
+In-Reply-To: <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+Reply-To: 4D Forum <x4d+77b0a8ba3a336d0fd1d1b7f13ae2fbaa@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c6a88f65-8fb6-443c-06a2-08d85480ed82
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <2BFEB93F1EF05E4683025814E6EB7BDB@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17725 FETCH (UID 41519 INTERNALDATE "09-Sep-2020 07:33:47 +0200" RFC822.SIZE 21449 BODY[HEADER] {2699}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id TTPm26uNK9E8bngw (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:33:46 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 150C344C4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:33:46 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIA
+Date: Wed, 9 Sep 2020 07:33:46 +0200
+Message-ID: <topic/15488/39937@discuss.4d.com>
+References: <topic/15488@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/e0fad1ceed3290f4db413b4a7ea441fa0bd8b9f70a984268b8ccdea19e81f369>
+In-Reply-To: <topic/15488@discuss.4d.com>
+Reply-To: 4D Forum <x4d+312f135363a5eaea06ed769d649e673c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a3ada2bb-0ed7-478c-e404-08d85481ecc9
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <9A4EDFB361F9A944895510D40354E92F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17726 FETCH (UID 41532 INTERNALDATE "09-Sep-2020 08:03:24 +0200" RFC822.SIZE 33824 BODY[HEADER] {2373}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from 69-171-232-173.mail-work-camp.facebook.com (69-171-232-173.mail-work-camp.facebook.com [69.171.232.173]) by barracuda.waycom.net with ESMTP id d1zZDhZavXkHiFY8 (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 08:03:22 +0200 (CEST)
+From: 4D via Workplace <notification@fbworkmail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Topic:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Index: AQHWhm7tjtQA8VoIykigM6sJY6REbA==
+Date: Wed, 9 Sep 2020 08:03:09 +0200
+Message-ID:
+	<22aaabc8f26211eab09898039bb2628c-ceb3c9e0@c3e7cb3ac76d8adae6acda24fc59d036ac77564b6e6e0fd1cd6c102cd931f66d>
+List-Unsubscribe:
+	<https://4d-fr.workplace.com/o.php?k=AS0wW5IeGu7_96lF&u=100015201798400&mid=5aedaeb190964G5af69a934900G5aedb34af0c36G9fd>
+Reply-To: noreply <noreply@fbworkmail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	cd47452e-fd2e-48a6-5f2d-08d854860f9c
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EE119DAC3348FF44A8407EA1B765B237@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17727 FETCH (UID 41534 INTERNALDATE "09-Sep-2020 09:49:34 +0200" RFC822.SIZE 55331 BODY[HEADER] {2981}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EUR01-VE1-obe.outbound.protection.outlook.com (mail-oln040092066091.outbound.protection.outlook.com [40.92.66.91]) by barracuda.waycom.net with ESMTP id YVN8Lb5CBNGVcwvv (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO); Wed, 09 Sep 2020 09:49:33 +0200 (CEST)
+Received: from HE1EUR01FT033.eop-EUR01.prod.protection.outlook.com
+ (2a01:111:e400:7e18::52) by
+ HE1EUR01HT083.eop-EUR01.prod.protection.outlook.com (2a01:111:e400:7e18::312)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16; Wed, 9 Sep
+ 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM (2a01:111:e400:7e18::4c)
+ by HE1EUR01FT033.mail.protection.outlook.com (2a01:111:e400:7e18::178) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16 via Frontend
+ Transport; Wed, 9 Sep 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52]) by SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52%8]) with mapi id 15.20.3370.016; Wed, 9 Sep 2020
+ 07:49:32 +0000
+From: clare duncumb <clareduncumb@hotmail.com>
+To: Djompolo Tandjigora <Djompolo.Tandjigora@4d.com>, Mohamed Bakiz
+	<Mohamed.Bakiz@4d.com>, Damien Fuzeau <Damien.Fuzeau@4d.com>,
+	=?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>, Vincent
+ Laluque <Vincent.Laluque@4d.com>
+Subject: English
+Thread-Topic: English
+Thread-Index: AQHWhn0362F0tGS+6U2P1ON8N5ILYQ==
+Date: Wed, 9 Sep 2020 09:49:32 +0200
+Message-ID:
+	<SVAP279MB0031E934E2D4F6326BE421E6D0260@SVAP279MB0031.NORP279.PROD.OUTLOOK.COM>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	eb2d362a-b218-4c24-400e-08d85494e4cb
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+Content-Type: multipart/mixed;
+	boundary="_002_SVAP279MB0031E934E2D4F6326BE421E6D0260SVAP279MB0031NORP_"
+
+)
+* 17728 FETCH (UID 41535 INTERNALDATE "09-Sep-2020 10:05:31 +0200" RFC822.SIZE 18925 BODY[HEADER] {2565}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KxoNAA0A67oeFKUK (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:05:30 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id B603D61992
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:05:30 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Entity.lock() in zwei Prozessen[German Community/German 4D
+ Partners]
+Thread-Topic: [4D Forum] Entity.lock() in zwei Prozessen[German
+ Community/German 4D Partners]
+Thread-Index: AQHWhn/8GF9Vg0PoLUq/1fU3YwzNhA==
+Date: Wed, 9 Sep 2020 10:05:30 +0200
+Message-ID: <topic/15184/39952@discuss.4d.com>
+References: <topic/15184@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/932d63117db0df326628feff49ea7073896a6c46521c623c398e2bd1f0e76ca2>
+In-Reply-To: <topic/15184@discuss.4d.com>
+Reply-To: 4D Forum <x4d+ffdd554bbdb65037dadbe22b01d4f3b1@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	0b6bd5aa-b0dd-408d-8155-08d854971f33
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <131DC7AFD7512E42B9AE828B69994BB4@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17729 FETCH (UID 41536 INTERNALDATE "09-Sep-2020 10:26:02 +0200" RFC822.SIZE 21540 BODY[HEADER] {2573}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:26:02 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id OCsKF0wSUzkaSvVd (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:26:01 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 2CB0F4ED4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:26:01 +0000 (UTC)
+From: Laurent Esnault via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Topic: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Index: AQHWhgcudBzSoPPkcU+wVaaM+Lzzyale550AgADwgIA=
+Date: Wed, 9 Sep 2020 10:26:01 +0200
+Message-ID: <topic/15492/39954@discuss.4d.com>
+References: <topic/15492@discuss.4d.com> <topic/15492/39894@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/4aba4ee7e5d7b9805c29b61bec7f2dd499e3024a22774ad459b05e4f4ac9d27d>
+In-Reply-To: <topic/15492/39894@discuss.4d.com>
+Reply-To: 4D Forum <x4d+7cb0376cb480778893aa34f63d94da8d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	790c6a33-c1db-4880-1cba-08d85499fc9b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0A66818784AC5A489ADBC66E6862C188@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17730 FETCH (UID 41537 INTERNALDATE "09-Sep-2020 10:44:46 +0200" RFC822.SIZE 16031 BODY[HEADER] {1620}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com ([194.177.35.85]) by EXCH16.ad2.4d.com
+ ([194.177.35.85]) with mapi id 15.01.1713.009; Wed, 9 Sep 2020 10:44:46 +0200
+From: Arnaud Schmitt <Arnaud.Schmitt@4d.com>
+To: =?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>
+CC: Migad Negib <Migad.Negib@4d.com>
+Subject: Questions sur taches Remote debugger
+Thread-Topic: Questions sur taches Remote debugger
+Thread-Index: AdaGg+xxsS/jprd8RJyONGWBJdP+TA==
+Date: Wed, 9 Sep 2020 10:44:46 +0200
+Message-ID: <7c0d59542eed4533b3add9ad7caa4b0c@4d.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	35808aee-524b-4d02-1ced-08d8549c9b09
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+)
+A006 OK FETCH completed.
+
+213	2020-09-09T10:45:29.902	1	3	C > "A007 UID FETCH 41537 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[])"
+214	2020-09-09T10:45:29.913	1	3	S < "* 17730 FETCH (UID 41537 INTERNALDATE "09-Sep-2020 10:44:46 +0200" RFC822.SIZE 16031 BODY[] {2101}"
+215	2020-09-09T10:45:29.916	1	3	S < Message data (2130 bytes)
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com ([194.177.35.85]) by EXCH16.ad2.4d.com
+ ([194.177.35.85]) with mapi id 15.01.1713.009; Wed, 9 Sep 2020 10:44:46 +0200
+From: Arnaud Schmitt <Arnaud.Schmitt@4d.com>
+To: =?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>
+CC: Migad Negib <Migad.Negib@4d.com>
+Subject: Questions sur taches Remote debugger
+Thread-Topic: Questions sur taches Remote debugger
+Thread-Index: AdaGg+xxsS/jprd8RJyONGWBJdP+TA==
+Date: Wed, 9 Sep 2020 10:44:46 +0200
+Message-ID: <7c0d59542eed4533b3add9ad7caa4b0c@4d.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	35808aee-524b-4d02-1ced-08d8549c9b09
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello
+
+J'ai fait un tour sur les t=E2ches du remote debugger headless, et je pense=
+ que la doc actuelle est =E0 peu pr=E8s en phase. Elle doit =EAtre modernis=
+=E9e (screen shots) mais ce n'est pas li=E9 au remote debugger.
+
+Juste une questions sur la spec https://project.4d.com/issues/113310
+
+
+=D8  est-ce qu'on valide le fait que l'option "Edit breakpoint" ne sera pas=
+ dispo en mode headless ? (ce qui pourra =EAtre mentionn=E9 dans la doc)
+
+Merci
+Arnaud
+
+
+
+)
+A007 OK FETCH completed.
+
+216	2020-09-09T10:45:29.916	1	3	S < "A007 OK FETCH completed."
+217	2020-09-09T10:45:36.753	1	3	C > "A008 UID SEARCH CHARSET UTF-8 SUBJECT "testé" "
+218	2020-09-09T10:45:36.759	1	3	S < "A008 NO [BADCHARSET (US-ASCII)] The specified charset is not supported."
+219	2020-09-09T10:46:21.239	1	3	C > "A009 UID SEARCH CHARSET UTF-8 SUBJECT "test" "
+220	2020-09-09T10:46:21.244	1	3	S < "A009 NO [BADCHARSET (US-ASCII)] The specified charset is not supported."
+221	2020-09-09T10:53:53.282	1	3	C > "A010 CLOSE"
+222	2020-09-09T10:53:53.287	1	3	S < "A010 OK CLOSE completed."
+223	2020-09-09T10:53:53.287	1	3	C > "A011 LOGOUT"
+224	2020-09-09T10:53:53.290	1	3	S < "* BYE Microsoft Exchange Server 2016 IMAP4 server signing off."
+225	2020-09-09T10:53:53.290	1	3	### IMAP Connection closed
+226	2020-09-09T10:55:07.881	1	3	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+227	2020-09-09T10:55:07.881	1	3	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+228	2020-09-09T10:55:07.881	1	3	C > "A001 CAPABILITY"
+229	2020-09-09T10:55:07.884	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 LOGINDISABLED STARTTLS AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+230	2020-09-09T10:55:07.884	1	3	S < "A001 OK CAPABILITY completed."
+231	2020-09-09T10:55:07.885	1	3	C > "A002 STARTTLS"
+232	2020-09-09T10:55:07.887	1	3	S < "A002 OK Begin TLS negotiation now."
+233	2020-09-09T10:55:07.888	1	3	### IMAP Encrypted TLS session started.
+234	2020-09-09T10:55:07.943	1	3	C > "A003 CAPABILITY"
+235	2020-09-09T10:55:07.946	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 AUTH=PLAIN AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+236	2020-09-09T10:55:07.946	1	3	S < "A003 OK CAPABILITY completed."
+237	2020-09-09T10:55:07.946	1	3	C > "A004 AUTHENTICATE PLAIN"
+238	2020-09-09T10:55:07.949	1	3	S < "+ "
+239	2020-09-09T10:55:07.949	1	3	C > "************************************************"
+240	2020-09-09T10:55:08.108	1	3	S < "A004 OK AUTHENTICATE completed."
+241	2020-09-09T10:55:12.179	1	3	C > "A005 SELECT INBOX"
+242	2020-09-09T10:55:12.771	1	3	S < "* 17732 EXISTS"
+243	2020-09-09T10:55:12.771	1	3	S < "* 2 RECENT"
+244	2020-09-09T10:55:12.771	1	3	S < "* FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)"
+245	2020-09-09T10:55:12.771	1	3	S < "* OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags"
+246	2020-09-09T10:55:12.771	1	3	S < "* OK [UNSEEN 17691] Is the first unseen message"
+247	2020-09-09T10:55:12.771	1	3	S < "* OK [UIDVALIDITY 14] UIDVALIDITY value"
+248	2020-09-09T10:55:12.771	1	3	S < "* OK [UIDNEXT 41540] The next unique identifier value"
+249	2020-09-09T10:55:12.771	1	3	S < "A005 OK [READ-WRITE] SELECT completed."
+250	2020-09-09T10:55:12.843	1	3	C > "A006 FETCH 17722:17732 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER])"
+251	2020-09-09T10:55:12.923	1	3	S < "* 17722 FETCH (UID 41516 INTERNALDATE "09-Sep-2020 03:01:46 +0200" RFC822.SIZE 18370 BODY[HEADER] {2477}"
+252	2020-09-09T10:55:12.923	1	3	S < Message data (29132 bytes)
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 03:01:46 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id S8bHGUCPCCJxH48x (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 03:01:45 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AB6D06150F
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 01:01:45 +0000 (UTC)
+From: mikey via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Triggers in project mode[Beta]
+Thread-Topic: [4D Forum] Triggers in project mode[Beta]
+Thread-Index: AQHWhd+sOTssvEDuiU+i2Td0b1OANqlfXEyA
+Date: Wed, 9 Sep 2020 03:01:45 +0200
+Message-ID: <topic/15483/39932@discuss.4d.com>
+References: <topic/15483@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/44c343d2aef1f12741aed9b24e83fc10257e3ec9e0218c864775c2c8094f2d09>
+In-Reply-To: <topic/15483@discuss.4d.com>
+Reply-To: 4D Forum <x4d+861216a7ece7e41d7353143c92f31569@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	59a3e395-0888-4db2-c402-08d8545bec99
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <67711CD281D07A4DB88725295947B7C5@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17723 FETCH (UID 41517 INTERNALDATE "09-Sep-2020 05:27:23 +0200" RFC822.SIZE 25897 BODY[HEADER] {2682}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 05:27:22 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KmgidDub4zrpZG0j (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 05:27:22 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 2122061696
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 03:27:22 +0000 (UTC)
+From: Belanger.Chris via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Topic:
+	=?utf-8?B?WzREIEZvcnVtXSBDbGFzcyAoY3MuKSDigJQgT2JqZWN0IGNhbm5vdCBiZSBk?=
+ =?utf-8?Q?efined_in_Storage=3F[Beta]?=
+Thread-Index: AQHWhjLy2MWqtnQ+k0Cri8aiEprYsqlfQGOAgABD8gA=
+Date: Wed, 9 Sep 2020 05:27:22 +0200
+Message-ID: <topic/15499/39934@discuss.4d.com>
+References: <topic/15499@discuss.4d.com> <topic/15499/39928@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/1380684b6f3b15c0caf2e3a55fb383df28a6162fac71bcbbeee176acb5ad2bfe>
+In-Reply-To: <topic/15499/39928@discuss.4d.com>
+Reply-To: 4D Forum <x4d+414620f344a9dbfa84f576236b2ac77c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	aec82265-dde9-4119-2931-08d8547043e5
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <195AADB17A3C5144AA2DBBBEB7D56F72@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17724 FETCH (UID 41518 INTERNALDATE "09-Sep-2020 07:26:39 +0200" RFC822.SIZE 21606 BODY[HEADER] {2624}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id HUc2RBDEr7WzPmAu (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:26:38 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:3::2b3:c6e0:8d82])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 4A7F74233
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:26:38 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] St get plain text in thread safe manner[English Community]
+Thread-Topic: [4D Forum] St get plain text in thread safe manner[English
+ Community]
+Thread-Index: AQHWhgWpLrDkkdgAgUSykqgHhUnzkKle/gCAgACoAgA=
+Date: Wed, 9 Sep 2020 07:26:38 +0200
+Message-ID: <topic/15491/39936@discuss.4d.com>
+References: <topic/15491@discuss.4d.com>
+ <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/206bd5d3cd8b6ed8d6baebb872e611c3db31bc8293ad375cbe4564be036a5556>
+In-Reply-To: <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+Reply-To: 4D Forum <x4d+77b0a8ba3a336d0fd1d1b7f13ae2fbaa@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c6a88f65-8fb6-443c-06a2-08d85480ed82
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <2BFEB93F1EF05E4683025814E6EB7BDB@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17725 FETCH (UID 41519 INTERNALDATE "09-Sep-2020 07:33:47 +0200" RFC822.SIZE 21449 BODY[HEADER] {2699}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id TTPm26uNK9E8bngw (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:33:46 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 150C344C4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:33:46 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIA
+Date: Wed, 9 Sep 2020 07:33:46 +0200
+Message-ID: <topic/15488/39937@discuss.4d.com>
+References: <topic/15488@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/e0fad1ceed3290f4db413b4a7ea441fa0bd8b9f70a984268b8ccdea19e81f369>
+In-Reply-To: <topic/15488@discuss.4d.com>
+Reply-To: 4D Forum <x4d+312f135363a5eaea06ed769d649e673c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a3ada2bb-0ed7-478c-e404-08d85481ecc9
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <9A4EDFB361F9A944895510D40354E92F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17726 FETCH (UID 41532 INTERNALDATE "09-Sep-2020 08:03:24 +0200" RFC822.SIZE 33824 BODY[HEADER] {2373}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from 69-171-232-173.mail-work-camp.facebook.com (69-171-232-173.mail-work-camp.facebook.com [69.171.232.173]) by barracuda.waycom.net with ESMTP id d1zZDhZavXkHiFY8 (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 08:03:22 +0200 (CEST)
+From: 4D via Workplace <notification@fbworkmail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Topic:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Index: AQHWhm7tjtQA8VoIykigM6sJY6REbA==
+Date: Wed, 9 Sep 2020 08:03:09 +0200
+Message-ID:
+	<22aaabc8f26211eab09898039bb2628c-ceb3c9e0@c3e7cb3ac76d8adae6acda24fc59d036ac77564b6e6e0fd1cd6c102cd931f66d>
+List-Unsubscribe:
+	<https://4d-fr.workplace.com/o.php?k=AS0wW5IeGu7_96lF&u=100015201798400&mid=5aedaeb190964G5af69a934900G5aedb34af0c36G9fd>
+Reply-To: noreply <noreply@fbworkmail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	cd47452e-fd2e-48a6-5f2d-08d854860f9c
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EE119DAC3348FF44A8407EA1B765B237@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17727 FETCH (UID 41534 INTERNALDATE "09-Sep-2020 09:49:34 +0200" RFC822.SIZE 55331 BODY[HEADER] {2981}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EUR01-VE1-obe.outbound.protection.outlook.com (mail-oln040092066091.outbound.protection.outlook.com [40.92.66.91]) by barracuda.waycom.net with ESMTP id YVN8Lb5CBNGVcwvv (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO); Wed, 09 Sep 2020 09:49:33 +0200 (CEST)
+Received: from HE1EUR01FT033.eop-EUR01.prod.protection.outlook.com
+ (2a01:111:e400:7e18::52) by
+ HE1EUR01HT083.eop-EUR01.prod.protection.outlook.com (2a01:111:e400:7e18::312)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16; Wed, 9 Sep
+ 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM (2a01:111:e400:7e18::4c)
+ by HE1EUR01FT033.mail.protection.outlook.com (2a01:111:e400:7e18::178) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16 via Frontend
+ Transport; Wed, 9 Sep 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52]) by SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52%8]) with mapi id 15.20.3370.016; Wed, 9 Sep 2020
+ 07:49:32 +0000
+From: clare duncumb <clareduncumb@hotmail.com>
+To: Djompolo Tandjigora <Djompolo.Tandjigora@4d.com>, Mohamed Bakiz
+	<Mohamed.Bakiz@4d.com>, Damien Fuzeau <Damien.Fuzeau@4d.com>,
+	=?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>, Vincent
+ Laluque <Vincent.Laluque@4d.com>
+Subject: English
+Thread-Topic: English
+Thread-Index: AQHWhn0362F0tGS+6U2P1ON8N5ILYQ==
+Date: Wed, 9 Sep 2020 09:49:32 +0200
+Message-ID:
+	<SVAP279MB0031E934E2D4F6326BE421E6D0260@SVAP279MB0031.NORP279.PROD.OUTLOOK.COM>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	eb2d362a-b218-4c24-400e-08d85494e4cb
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+Content-Type: multipart/mixed;
+	boundary="_002_SVAP279MB0031E934E2D4F6326BE421E6D0260SVAP279MB0031NORP_"
+
+)
+* 17728 FETCH (UID 41535 INTERNALDATE "09-Sep-2020 10:05:31 +0200" RFC822.SIZE 18925 BODY[HEADER] {2565}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KxoNAA0A67oeFKUK (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:05:30 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id B603D61992
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:05:30 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Entity.lock() in zwei Prozessen[German Community/German 4D
+ Partners]
+Thread-Topic: [4D Forum] Entity.lock() in zwei Prozessen[German
+ Community/German 4D Partners]
+Thread-Index: AQHWhn/8GF9Vg0PoLUq/1fU3YwzNhA==
+Date: Wed, 9 Sep 2020 10:05:30 +0200
+Message-ID: <topic/15184/39952@discuss.4d.com>
+References: <topic/15184@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/932d63117db0df326628feff49ea7073896a6c46521c623c398e2bd1f0e76ca2>
+In-Reply-To: <topic/15184@discuss.4d.com>
+Reply-To: 4D Forum <x4d+ffdd554bbdb65037dadbe22b01d4f3b1@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	0b6bd5aa-b0dd-408d-8155-08d854971f33
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <131DC7AFD7512E42B9AE828B69994BB4@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17729 FETCH (UID 41536 INTERNALDATE "09-Sep-2020 10:26:02 +0200" RFC822.SIZE 21540 BODY[HEADER] {2573}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:26:02 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id OCsKF0wSUzkaSvVd (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:26:01 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 2CB0F4ED4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:26:01 +0000 (UTC)
+From: Laurent Esnault via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Topic: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Index: AQHWhgcudBzSoPPkcU+wVaaM+Lzzyale550AgADwgIA=
+Date: Wed, 9 Sep 2020 10:26:01 +0200
+Message-ID: <topic/15492/39954@discuss.4d.com>
+References: <topic/15492@discuss.4d.com> <topic/15492/39894@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/4aba4ee7e5d7b9805c29b61bec7f2dd499e3024a22774ad459b05e4f4ac9d27d>
+In-Reply-To: <topic/15492/39894@discuss.4d.com>
+Reply-To: 4D Forum <x4d+7cb0376cb480778893aa34f63d94da8d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	790c6a33-c1db-4880-1cba-08d85499fc9b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0A66818784AC5A489ADBC66E6862C188@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17730 FETCH (UID 41537 INTERNALDATE "09-Sep-2020 10:44:46 +0200" RFC822.SIZE 16031 BODY[HEADER] {1620}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com ([194.177.35.85]) by EXCH16.ad2.4d.com
+ ([194.177.35.85]) with mapi id 15.01.1713.009; Wed, 9 Sep 2020 10:44:46 +0200
+From: Arnaud Schmitt <Arnaud.Schmitt@4d.com>
+To: =?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>
+CC: Migad Negib <Migad.Negib@4d.com>
+Subject: Questions sur taches Remote debugger
+Thread-Topic: Questions sur taches Remote debugger
+Thread-Index: AdaGg+xxsS/jprd8RJyONGWBJdP+TA==
+Date: Wed, 9 Sep 2020 10:44:46 +0200
+Message-ID: <7c0d59542eed4533b3add9ad7caa4b0c@4d.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	35808aee-524b-4d02-1ced-08d8549c9b09
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+)
+* 17731 FETCH (UID 41538 INTERNALDATE "09-Sep-2020 10:47:41 +0200" RFC822.SIZE 22617 BODY[HEADER] {2748}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id 7fJHQD3zuaIJbWgV (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:47:40 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 1F58C618B1
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:47:40 +0000 (UTC)
+From: sofia bacheikh via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIAgAA2LQA=
+Date: Wed, 9 Sep 2020 10:47:40 +0200
+Message-ID: <topic/15488/39955@discuss.4d.com>
+References: <topic/15488@discuss.4d.com> <topic/15488/39937@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/dc6d44eac04651db9653ebf89e731dfbe05e297c0525aface79cad9984a7b561>
+In-Reply-To: <topic/15488/39937@discuss.4d.com>
+Reply-To: 4D Forum <x4d+d8ab68d624fe1243bf4cc7f5bccc4549@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a59f62f8-030b-4fa0-44ea-08d8549d030b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <07F6B37B67BD054EACEFDDAC21861B6F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17732 FETCH (UID 41539 INTERNALDATE "09-Sep-2020 10:48:41 +0200" RFC822.SIZE 21308 BODY[HEADER] {2671}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id lYE4hv1XoO7mj4tQ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:48:40 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AFEB0618AC
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:48:40 +0000 (UTC)
+From: Marie-Sophie Landrieu via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Orda Entity Class code - Where is it executed in 4D Server
+ enviroment? Can it execute on the client?[English Community]
+Thread-Topic: [4D Forum] Orda Entity Class code - Where is it executed in 4D
+ Server enviroment? Can it execute on the client?[English Community]
+Thread-Index: AQHWhoYEJbEaEjKioEOOFiUA4HJovg==
+Date: Wed, 9 Sep 2020 10:48:40 +0200
+Message-ID: <topic/15376/39956@discuss.4d.com>
+References: <topic/15376@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/522b6e2ba81dae7ab307feea12012ad11ed336ca72d701ac9b622d73def598a0>
+In-Reply-To: <topic/15376@discuss.4d.com>
+Reply-To: 4D Forum <x4d+acdeda97505b14829ff816b7e95820f0@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	f05cbfd2-22a5-4095-9ef6-08d8549d26e8
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <5171B83E7FC1E542B2D3D057FF9753A0@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+A006 OK FETCH completed.
+
+253	2020-09-09T10:55:12.936	1	3	C > "A007 UID FETCH 41539 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[])"
+254	2020-09-09T10:55:12.955	1	3	S < "* 17732 FETCH (UID 41539 INTERNALDATE "09-Sep-2020 10:48:41 +0200" RFC822.SIZE 21308 BODY[] {4081}"
+255	2020-09-09T10:55:12.955	1	3	S < Message data (4110 bytes)
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id lYE4hv1XoO7mj4tQ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:48:40 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AFEB0618AC
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:48:40 +0000 (UTC)
+From: Marie-Sophie Landrieu via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Orda Entity Class code - Where is it executed in 4D Server
+ enviroment? Can it execute on the client?[English Community]
+Thread-Topic: [4D Forum] Orda Entity Class code - Where is it executed in 4D
+ Server enviroment? Can it execute on the client?[English Community]
+Thread-Index: AQHWhoYEJbEaEjKioEOOFiUA4HJovg==
+Date: Wed, 9 Sep 2020 10:48:40 +0200
+Message-ID: <topic/15376/39956@discuss.4d.com>
+References: <topic/15376@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/522b6e2ba81dae7ab307feea12012ad11ed336ca72d701ac9b622d73def598a0>
+In-Reply-To: <topic/15376@discuss.4d.com>
+Reply-To: 4D Forum <x4d+acdeda97505b14829ff816b7e95820f0@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	f05cbfd2-22a5-4095-9ef6-08d8549d26e8
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <5171B83E7FC1E542B2D3D057FF9753A0@4d.com>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+
+W2h0dHBzOi8vZHViMi5kaXNjb3Vyc2UtY2RuLmNvbS9idXNpbmVzczIwL3VzZXJfYXZhdGFyL2Rp
+c2N1c3MuNGQuY29tL21hcmllLXNvcGhpZV9sYW5kcmllLzQ1LzY0XzIucG5nXSAgICAgICAgIE1h
+cmllLVNvcGhpZV9MYW5kcmllPGh0dHBzOi8vZGlzY3Vzcy40ZC5jb20vdS9tYXJpZS1zb3BoaWVf
+bGFuZHJpZT4gNEQgU3RhZmYNClNlcHRlbWJlciA5DQoNCkhpLA0KDQpZZXMgd2l0aCB2MThSNCwg
+dGhlIE9SREEgRGF0YSBNb2RlbCBDbGFzc2VzIGZ1bmN0aW9ucyBhcmUgZXhlY3V0ZWQgb24gdGhl
+IHNlcnZlci4NCg0KV2UgYXJlIHdvcmtpbmcgb24gYSB3YXkgdG8gcnVuIHRoZW0gbG9jYWxseSBv
+biB0aGUgY2xpZW50Lg0KDQpCZSBhd2FyZSB0aGF0IGlmIHlvdSB3b3JrIHdpdGggYW4gZW50aXR5
+LCB3aGVuIGFuIGVudGl0eSBjbGFzcyBmdW5jdGlvbiBydW5zIChvbiB0aGUgc2VydmVyKSwgaXQg
+cmVjZWl2ZXMgYWxsIHRoZSB1cGRhdGVzIGRvbmUgb24gdGhlIGVudGl0eSBvbiB0aGUgY2xpZW50
+IHNpZGUuDQoNClRoZXJlIHNob3VsZCBiZSBubyBpc3N1ZSB3aGVuIGEgZnVuY3Rpb24gcnVucyBv
+biBhIG5ldyBlbnRpdHkuDQoNCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fDQoNClZp
+c2l0IFRvcGljPGh0dHBzOi8vZGlzY3Vzcy40ZC5jb20vdC9vcmRhLWVudGl0eS1jbGFzcy1jb2Rl
+LXdoZXJlLWlzLWl0LWV4ZWN1dGVkLWluLTRkLXNlcnZlci1lbnZpcm9tZW50LWNhbi1pdC1leGVj
+dXRlLW9uLXRoZS1jbGllbnQvMTUzNzYvNz4gb3IgcmVwbHkgdG8gdGhpcyBlbWFpbCB0byByZXNw
+b25kLg0KDQpZb3UgYXJlIHJlY2VpdmluZyB0aGlzIGJlY2F1c2UgeW91IGVuYWJsZWQgbWFpbGlu
+ZyBsaXN0IG1vZGUuDQoNClRvIHVuc3Vic2NyaWJlIGZyb20gdGhlc2UgZW1haWxzLCBjbGljayBo
+ZXJlPGh0dHBzOi8vZGlzY3Vzcy40ZC5jb20vZW1haWwvdW5zdWJzY3JpYmUvNTIyYjZlMmJhODFk
+YWU3YWIzMDdmZWVhMTIwMTJhZDExZWQzMzZjYTcyZDcwMWFjOWI2MjJkNzNkZWY1OThhMD4uDQoN
+Cg0K
+)
+A007 OK FETCH completed.
+
+256	2020-09-09T10:55:12.955	1	3	S < "A007 OK FETCH completed."
+257	2020-09-09T10:55:18.574	1	3	C > "A008 UID SEARCH CHARSET UTF-8 SUBJECT {6} "
+258	2020-09-09T10:55:19.200	1	3	S < "+ Ready for additional command text."
+1	2020-09-09T11:06:59.767	1	3	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+2	2020-09-09T11:06:59.767	1	3	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+3	2020-09-09T11:06:59.768	1	3	C > "A001 CAPABILITY"
+4	2020-09-09T11:06:59.771	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 LOGINDISABLED STARTTLS AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+5	2020-09-09T11:06:59.771	1	3	S < "A001 OK CAPABILITY completed."
+6	2020-09-09T11:06:59.771	1	3	C > "A002 STARTTLS"
+7	2020-09-09T11:06:59.774	1	3	S < "A002 OK Begin TLS negotiation now."
+8	2020-09-09T11:06:59.774	1	3	### IMAP Encrypted TLS session started.
+9	2020-09-09T11:06:59.809	1	3	C > "A003 CAPABILITY"
+10	2020-09-09T11:06:59.812	1	3	S < "* CAPABILITY IMAP4 IMAP4rev1 AUTH=PLAIN AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+11	2020-09-09T11:06:59.812	1	3	S < "A003 OK CAPABILITY completed."
+12	2020-09-09T11:06:59.812	1	3	C > "A004 AUTHENTICATE PLAIN"
+13	2020-09-09T11:06:59.815	1	3	S < "+ "
+14	2020-09-09T11:06:59.815	1	3	C > "************************************************"
+15	2020-09-09T11:07:00.417	1	3	S < "A004 OK AUTHENTICATE completed."
+16	2020-09-09T11:07:01.762	1	3	C > "A005 SELECT INBOX"
+17	2020-09-09T11:07:02.367	1	3	S < "* 17734 EXISTS"
+18	2020-09-09T11:07:02.367	1	3	S < "* 2 RECENT"
+19	2020-09-09T11:07:02.367	1	3	S < "* FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)"
+20	2020-09-09T11:07:02.367	1	3	S < "* OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags"
+21	2020-09-09T11:07:02.367	1	3	S < "* OK [UNSEEN 17691] Is the first unseen message"
+22	2020-09-09T11:07:02.367	1	3	S < "* OK [UIDVALIDITY 14] UIDVALIDITY value"
+23	2020-09-09T11:07:02.367	1	3	S < "* OK [UIDNEXT 41542] The next unique identifier value"
+24	2020-09-09T11:07:02.367	1	3	S < "A005 OK [READ-WRITE] SELECT completed."
+25	2020-09-09T11:07:02.429	1	3	C > "A006 FETCH 17724:17734 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER])"
+26	2020-09-09T11:07:02.517	1	3	S < "* 17724 FETCH (UID 41518 INTERNALDATE "09-Sep-2020 07:26:39 +0200" RFC822.SIZE 21606 BODY[HEADER] {2624}"
+27	2020-09-09T11:07:02.517	1	3	S < Message data (29240 bytes)
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:26:39 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id HUc2RBDEr7WzPmAu (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:26:38 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:3::2b3:c6e0:8d82])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 4A7F74233
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:26:38 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] St get plain text in thread safe manner[English Community]
+Thread-Topic: [4D Forum] St get plain text in thread safe manner[English
+ Community]
+Thread-Index: AQHWhgWpLrDkkdgAgUSykqgHhUnzkKle/gCAgACoAgA=
+Date: Wed, 9 Sep 2020 07:26:38 +0200
+Message-ID: <topic/15491/39936@discuss.4d.com>
+References: <topic/15491@discuss.4d.com>
+ <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/206bd5d3cd8b6ed8d6baebb872e611c3db31bc8293ad375cbe4564be036a5556>
+In-Reply-To: <F8E81C66-5896-4EB9-A42B-1807D872A943@pgedit.com>
+Reply-To: 4D Forum <x4d+77b0a8ba3a336d0fd1d1b7f13ae2fbaa@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	c6a88f65-8fb6-443c-06a2-08d85480ed82
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <2BFEB93F1EF05E4683025814E6EB7BDB@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17725 FETCH (UID 41519 INTERNALDATE "09-Sep-2020 07:33:47 +0200" RFC822.SIZE 21449 BODY[HEADER] {2699}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 07:33:47 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id TTPm26uNK9E8bngw (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 07:33:46 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 150C344C4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 05:33:46 +0000 (UTC)
+From: Keisuke Miyako via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIA
+Date: Wed, 9 Sep 2020 07:33:46 +0200
+Message-ID: <topic/15488/39937@discuss.4d.com>
+References: <topic/15488@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/e0fad1ceed3290f4db413b4a7ea441fa0bd8b9f70a984268b8ccdea19e81f369>
+In-Reply-To: <topic/15488@discuss.4d.com>
+Reply-To: 4D Forum <x4d+312f135363a5eaea06ed769d649e673c@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a3ada2bb-0ed7-478c-e404-08d85481ecc9
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <9A4EDFB361F9A944895510D40354E92F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17726 FETCH (UID 41532 INTERNALDATE "09-Sep-2020 08:03:24 +0200" RFC822.SIZE 33824 BODY[HEADER] {2373}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 08:03:23 +0200
+Received: from 69-171-232-173.mail-work-camp.facebook.com (69-171-232-173.mail-work-camp.facebook.com [69.171.232.173]) by barracuda.waycom.net with ESMTP id d1zZDhZavXkHiFY8 (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 08:03:22 +0200 (CEST)
+From: 4D via Workplace <notification@fbworkmail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Topic:
+	=?utf-8?B?UHVibGljYXRpb25zIMOgIGxhIHVuZcKgOiBOYXRoYWxpZSBQZWx0aWVyIMOg?=
+ =?utf-8?Q?_4D_Oeuvres_sociales?=
+Thread-Index: AQHWhm7tjtQA8VoIykigM6sJY6REbA==
+Date: Wed, 9 Sep 2020 08:03:09 +0200
+Message-ID:
+	<22aaabc8f26211eab09898039bb2628c-ceb3c9e0@c3e7cb3ac76d8adae6acda24fc59d036ac77564b6e6e0fd1cd6c102cd931f66d>
+List-Unsubscribe:
+	<https://4d-fr.workplace.com/o.php?k=AS0wW5IeGu7_96lF&u=100015201798400&mid=5aedaeb190964G5af69a934900G5aedb34af0c36G9fd>
+Reply-To: noreply <noreply@fbworkmail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	cd47452e-fd2e-48a6-5f2d-08d854860f9c
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <EE119DAC3348FF44A8407EA1B765B237@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17727 FETCH (UID 41534 INTERNALDATE "09-Sep-2020 09:49:34 +0200" RFC822.SIZE 55331 BODY[HEADER] {2981}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 09:49:34 +0200
+Received: from EUR01-VE1-obe.outbound.protection.outlook.com (mail-oln040092066091.outbound.protection.outlook.com [40.92.66.91]) by barracuda.waycom.net with ESMTP id YVN8Lb5CBNGVcwvv (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO); Wed, 09 Sep 2020 09:49:33 +0200 (CEST)
+Received: from HE1EUR01FT033.eop-EUR01.prod.protection.outlook.com
+ (2a01:111:e400:7e18::52) by
+ HE1EUR01HT083.eop-EUR01.prod.protection.outlook.com (2a01:111:e400:7e18::312)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16; Wed, 9 Sep
+ 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM (2a01:111:e400:7e18::4c)
+ by HE1EUR01FT033.mail.protection.outlook.com (2a01:111:e400:7e18::178) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3370.16 via Frontend
+ Transport; Wed, 9 Sep 2020 07:49:32 +0000
+Received: from SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52]) by SVAP279MB0031.NORP279.PROD.OUTLOOK.COM
+ ([fe80::54d9:d1c:d5f3:cf52%8]) with mapi id 15.20.3370.016; Wed, 9 Sep 2020
+ 07:49:32 +0000
+From: clare duncumb <clareduncumb@hotmail.com>
+To: Djompolo Tandjigora <Djompolo.Tandjigora@4d.com>, Mohamed Bakiz
+	<Mohamed.Bakiz@4d.com>, Damien Fuzeau <Damien.Fuzeau@4d.com>,
+	=?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>, Vincent
+ Laluque <Vincent.Laluque@4d.com>
+Subject: English
+Thread-Topic: English
+Thread-Index: AQHWhn0362F0tGS+6U2P1ON8N5ILYQ==
+Date: Wed, 9 Sep 2020 09:49:32 +0200
+Message-ID:
+	<SVAP279MB0031E934E2D4F6326BE421E6D0260@SVAP279MB0031.NORP279.PROD.OUTLOOK.COM>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	eb2d362a-b218-4c24-400e-08d85494e4cb
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+Content-Type: multipart/mixed;
+	boundary="_002_SVAP279MB0031E934E2D4F6326BE421E6D0260SVAP279MB0031NORP_"
+
+)
+* 17728 FETCH (UID 41535 INTERNALDATE "09-Sep-2020 10:05:31 +0200" RFC822.SIZE 18925 BODY[HEADER] {2565}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:05:31 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id KxoNAA0A67oeFKUK (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:05:30 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id B603D61992
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:05:30 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Entity.lock() in zwei Prozessen[German Community/German 4D
+ Partners]
+Thread-Topic: [4D Forum] Entity.lock() in zwei Prozessen[German
+ Community/German 4D Partners]
+Thread-Index: AQHWhn/8GF9Vg0PoLUq/1fU3YwzNhA==
+Date: Wed, 9 Sep 2020 10:05:30 +0200
+Message-ID: <topic/15184/39952@discuss.4d.com>
+References: <topic/15184@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/932d63117db0df326628feff49ea7073896a6c46521c623c398e2bd1f0e76ca2>
+In-Reply-To: <topic/15184@discuss.4d.com>
+Reply-To: 4D Forum <x4d+ffdd554bbdb65037dadbe22b01d4f3b1@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	0b6bd5aa-b0dd-408d-8155-08d854971f33
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <131DC7AFD7512E42B9AE828B69994BB4@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17729 FETCH (UID 41536 INTERNALDATE "09-Sep-2020 10:26:02 +0200" RFC822.SIZE 21540 BODY[HEADER] {2573}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:26:02 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:26:01 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id OCsKF0wSUzkaSvVd (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:26:01 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 2CB0F4ED4
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:26:01 +0000 (UTC)
+From: Laurent Esnault via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Topic: [4D Forum] Fonction "File" et les dossiers[French Community]
+Thread-Index: AQHWhgcudBzSoPPkcU+wVaaM+Lzzyale550AgADwgIA=
+Date: Wed, 9 Sep 2020 10:26:01 +0200
+Message-ID: <topic/15492/39954@discuss.4d.com>
+References: <topic/15492@discuss.4d.com> <topic/15492/39894@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/4aba4ee7e5d7b9805c29b61bec7f2dd499e3024a22774ad459b05e4f4ac9d27d>
+In-Reply-To: <topic/15492/39894@discuss.4d.com>
+Reply-To: 4D Forum <x4d+7cb0376cb480778893aa34f63d94da8d@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	790c6a33-c1db-4880-1cba-08d85499fc9b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0A66818784AC5A489ADBC66E6862C188@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17730 FETCH (UID 41537 INTERNALDATE "09-Sep-2020 10:44:46 +0200" RFC822.SIZE 16031 BODY[HEADER] {1620}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:44:46 +0200
+Received: from EXCH16.ad2.4d.com ([194.177.35.85]) by EXCH16.ad2.4d.com
+ ([194.177.35.85]) with mapi id 15.01.1713.009; Wed, 9 Sep 2020 10:44:46 +0200
+From: Arnaud Schmitt <Arnaud.Schmitt@4d.com>
+To: =?iso-8859-1?Q?Fabrice_Mainguen=E9?= <Fabrice.Mainguene@4d.com>
+CC: Migad Negib <Migad.Negib@4d.com>
+Subject: Questions sur taches Remote debugger
+Thread-Topic: Questions sur taches Remote debugger
+Thread-Index: AdaGg+xxsS/jprd8RJyONGWBJdP+TA==
+Date: Wed, 9 Sep 2020 10:44:46 +0200
+Message-ID: <7c0d59542eed4533b3add9ad7caa4b0c@4d.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	35808aee-524b-4d02-1ced-08d8549c9b09
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+)
+* 17731 FETCH (UID 41538 INTERNALDATE "09-Sep-2020 10:47:41 +0200" RFC822.SIZE 22617 BODY[HEADER] {2748}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:47:41 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id 7fJHQD3zuaIJbWgV (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:47:40 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:7::25e:e49:1aef])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id 1F58C618B1
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:47:40 +0000 (UTC)
+From: sofia bacheikh via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Explanation about the following sentence: "Build the macOS
+ archive on a Mac and copy it to the final package[Worldwide Internal Forum]
+Thread-Topic: [4D Forum] Explanation about the following sentence: "Build the
+ macOS archive on a Mac and copy it to the final package[Worldwide Internal
+ Forum]
+Thread-Index: AQHWhfzf/FZdVGSIBkOnyhmvtjY8bKlfqBIAgAA2LQA=
+Date: Wed, 9 Sep 2020 10:47:40 +0200
+Message-ID: <topic/15488/39955@discuss.4d.com>
+References: <topic/15488@discuss.4d.com> <topic/15488/39937@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/dc6d44eac04651db9653ebf89e731dfbe05e297c0525aface79cad9984a7b561>
+In-Reply-To: <topic/15488/39937@discuss.4d.com>
+Reply-To: 4D Forum <x4d+d8ab68d624fe1243bf4cc7f5bccc4549@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	a59f62f8-030b-4fa0-44ea-08d8549d030b
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <07F6B37B67BD054EACEFDDAC21861B6F@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17732 FETCH (UID 41539 INTERNALDATE "09-Sep-2020 10:48:41 +0200" RFC822.SIZE 21308 BODY[HEADER] {2671}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) by
+ EXCH16.ad2.4d.com (2002:c2b1:2355::c2b1:2355) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:48:41 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id lYE4hv1XoO7mj4tQ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:48:40 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id AFEB0618AC
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:48:40 +0000 (UTC)
+From: Marie-Sophie Landrieu via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Orda Entity Class code - Where is it executed in 4D Server
+ enviroment? Can it execute on the client?[English Community]
+Thread-Topic: [4D Forum] Orda Entity Class code - Where is it executed in 4D
+ Server enviroment? Can it execute on the client?[English Community]
+Thread-Index: AQHWhoYEJbEaEjKioEOOFiUA4HJovg==
+Date: Wed, 9 Sep 2020 10:48:40 +0200
+Message-ID: <topic/15376/39956@discuss.4d.com>
+References: <topic/15376@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/522b6e2ba81dae7ab307feea12012ad11ed336ca72d701ac9b622d73def598a0>
+In-Reply-To: <topic/15376@discuss.4d.com>
+Reply-To: 4D Forum <x4d+acdeda97505b14829ff816b7e95820f0@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	f05cbfd2-22a5-4095-9ef6-08d8549d26e8
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <5171B83E7FC1E542B2D3D057FF9753A0@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17733 FETCH (UID 41540 INTERNALDATE "09-Sep-2020 10:59:42 +0200" RFC822.SIZE 18768 BODY[HEADER] {2554}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 10:59:42 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 10:59:42 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 10:59:42 +0200
+Received: from mx-out-01a.dub2.discourse.cloud (mx-out-01a.dub2.discourse.cloud [184.104.202.153]) by barracuda.waycom.net with ESMTP id wPxcreQ0ovruJpCC (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 10:59:42 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:5::253:e285:d22e])
+	by mx-out-01a.dub2.discourse.cloud (Postfix) with ESMTP id 11DB8385C
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 08:59:42 +0000 (UTC)
+From: Marie-Sophie Landrieu via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Is there a plan to let us extend the base orda
+ classes?[Beta]
+Thread-Topic: [4D Forum] Is there a plan to let us extend the base orda
+ classes?[Beta]
+Thread-Index: AQHWhoeOOIm5WfTp9EabqBsvq8IzAA==
+Date: Wed, 9 Sep 2020 10:59:42 +0200
+Message-ID: <topic/15381/39957@discuss.4d.com>
+References: <topic/15381@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/54c17adb5081f4bf9eb8ece69d3aa35fce4b6e7138dd4b3c059f7e433529d1d6>
+In-Reply-To: <topic/15381@discuss.4d.com>
+Reply-To: 4D Forum <x4d+8365a3f5367bdbbd34711e5938bd89bf@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	9c4678cf-4e43-4a41-81c5-08d8549eb10e
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <D8DBA40E15412A4EA82B8B02C230DB4D@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+* 17734 FETCH (UID 41541 INTERNALDATE "09-Sep-2020 11:05:08 +0200" RFC822.SIZE 24182 BODY[HEADER] {2713}
+MIME-Version: 1.0
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id MfhwLj0va9cA4LyN (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 11:05:08 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id C067A61A23
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 09:05:07 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Orda Entity Class code - Where is it executed in 4D Server
+ enviroment? Can it execute on the client?[English Community]
+Thread-Topic: [4D Forum] Orda Entity Class code - Where is it executed in 4D
+ Server enviroment? Can it execute on the client?[English Community]
+Thread-Index: AQHWhoYEJbEaEjKioEOOFiUA4HJovqlf4gyA
+Date: Wed, 9 Sep 2020 11:05:07 +0200
+Message-ID: <topic/15376/39958@discuss.4d.com>
+References: <topic/15376@discuss.4d.com> <topic/15376/39956@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/cc7569de98a8b5f0649dcdd220a891f8bfde68d4b1a6248a31f0d43b5ef1b2e1>
+In-Reply-To: <topic/15376/39956@discuss.4d.com>
+Reply-To: 4D Forum <x4d+45709108194c0da6736d5772fe551e5f@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	b31fed23-e294-4169-be0d-08d8549f735f
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <F80B8436D0E99B44BEA1BFB29817EC94@4d.com>
+Content-Transfer-Encoding: base64
+
+)
+A006 OK FETCH completed.
+
+28	2020-09-09T11:07:02.525	1	3	C > "A007 UID FETCH 41541 (UID INTERNALDATE RFC822.SIZE BODY.PEEK[])"
+29	2020-09-09T11:07:02.538	1	3	S < "* 17734 FETCH (UID 41541 INTERNALDATE "09-Sep-2020 11:05:08 +0200" RFC822.SIZE 24182 BODY[] {5259}"
+30	2020-09-09T11:07:02.539	1	3	S < Message data (5288 bytes)
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5 via Mailbox Transport; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) by
+ EXCH16.ad2.4d.com (2002:c2b1:2354::c2b1:2354) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id
+ 15.1.1713.5; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from barracuda.waycom.net (195.214.240.154) by exchange.4d.com
+ (194.177.35.84) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521) id 15.1.1713.5 via
+ Frontend Transport; Wed, 9 Sep 2020 11:05:08 +0200
+Received: from mx-out-01b.dub2.discourse.cloud (mx-out-01b.dub2.discourse.cloud [184.104.202.154]) by barracuda.waycom.net with ESMTP id MfhwLj0va9cA4LyN (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO) for <fabrice.mainguene@4d.com>; Wed, 09 Sep 2020 11:05:08 +0200 (CEST)
+Received: from localhost.localdomain (unknown [IPv6:2001:470:ca:1::22f:35e3:a32b])
+	by mx-out-01b.dub2.discourse.cloud (Postfix) with ESMTP id C067A61A23
+	for <fabrice.mainguene@4d.com>; Wed,  9 Sep 2020 09:05:07 +0000 (UTC)
+From: Christian Sakowski via 4D Forum <x4d@discoursemail.com>
+To: =?utf-8?B?RmFicmljZSBNYWluZ3VlbsOp?= <Fabrice.Mainguene@4d.com>
+Subject: [4D Forum] Orda Entity Class code - Where is it executed in 4D Server
+ enviroment? Can it execute on the client?[English Community]
+Thread-Topic: [4D Forum] Orda Entity Class code - Where is it executed in 4D
+ Server enviroment? Can it execute on the client?[English Community]
+Thread-Index: AQHWhoYEJbEaEjKioEOOFiUA4HJovqlf4gyA
+Date: Wed, 9 Sep 2020 11:05:07 +0200
+Message-ID: <topic/15376/39958@discuss.4d.com>
+References: <topic/15376@discuss.4d.com> <topic/15376/39956@discuss.4d.com>
+List-Unsubscribe:
+	<https://discuss.4d.com/email/unsubscribe/cc7569de98a8b5f0649dcdd220a891f8bfde68d4b1a6248a31f0d43b5ef1b2e1>
+In-Reply-To: <topic/15376/39956@discuss.4d.com>
+Reply-To: 4D Forum <x4d+45709108194c0da6736d5772fe551e5f@discoursemail.com>
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCH16.ad2.4d.com
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-Network-Message-Id:
+	b31fed23-e294-4169-be0d-08d8549f735f
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <F80B8436D0E99B44BEA1BFB29817EC94@4d.com>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+
+W2h0dHBzOi8vZHViMi5kaXNjb3Vyc2UtY2RuLmNvbS9idXNpbmVzczIwL3VzZXJfYXZhdGFyL2Rp
+c2N1c3MuNGQuY29tL3Nha293c2tpLmNocmlzdGlhbi80NS80OTNfMi5wbmddICBTYWtvd3NraS5D
+aHJpc3RpYW48aHR0cHM6Ly9kaXNjdXNzLjRkLmNvbS91L3Nha293c2tpLmNocmlzdGlhbj4gUGFy
+dG5lcnMNClNlcHRlbWJlciA5DQpbaHR0cHM6Ly9kdWIyLmRpc2NvdXJzZS1jZG4uY29tL2J1c2lu
+ZXNzMjAvdXNlcl9hdmF0YXIvZGlzY3Vzcy40ZC5jb20vbWFyaWUtc29waGllX2xhbmRyaWUvNDAv
+NjRfMi5wbmddIE1hcmllLVNvcGhpZV9MYW5kcmllOg0KDQpCZSBhd2FyZSB0aGF0IGlmIHlvdSB3
+b3JrIHdpdGggYW4gZW50aXR5LCB3aGVuIGFuIGVudGl0eSBjbGFzcyBmdW5jdGlvbiBydW5zIChv
+biB0aGUgc2VydmVyKSwgaXQgcmVjZWl2ZXMgYWxsIHRoZSB1cGRhdGVzIGRvbmUgb24gdGhlIGVu
+dGl0eSBvbiB0aGUgY2xpZW50IHNpZGUuDQoNCk5vcm1hbGx5LCBhbiBlbnRpdHktZnVuY3Rpb24g
+aXMgY2FsbGVkIHRvIGRvIHNvbWV0aGluZyB3aXRoIGl0LCBzbyB0aGUgcHJvYmxlbSBpcywgdGhh
+dCB0aGUgY2hhbmdlcyBvbiB0aGUgZW50aXR5IG9uIHRoZSBTZXJ2ZXIgaXMgbm90IHVwZGF0ZWQg
+b24gdGhlIENsaWVudCBzaWRlLg0KDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0K
+DQpWaXNpdCBUb3BpYzxodHRwczovL2Rpc2N1c3MuNGQuY29tL3Qvb3JkYS1lbnRpdHktY2xhc3Mt
+Y29kZS13aGVyZS1pcy1pdC1leGVjdXRlZC1pbi00ZC1zZXJ2ZXItZW52aXJvbWVudC1jYW4taXQt
+ZXhlY3V0ZS1vbi10aGUtY2xpZW50LzE1Mzc2Lzg+IG9yIHJlcGx5IHRvIHRoaXMgZW1haWwgdG8g
+cmVzcG9uZC4NCg0KX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCkluIFJlcGx5IFRv
+DQpbaHR0cHM6Ly9kdWIyLmRpc2NvdXJzZS1jZG4uY29tL2J1c2luZXNzMjAvdXNlcl9hdmF0YXIv
+ZGlzY3Vzcy40ZC5jb20vbWFyaWUtc29waGllX2xhbmRyaWUvNDUvNjRfMi5wbmddICAgICAgICAg
+TWFyaWUtU29waGllX0xhbmRyaWU8aHR0cHM6Ly9kaXNjdXNzLjRkLmNvbS91L21hcmllLXNvcGhp
+ZV9sYW5kcmllPiA0RCBTdGFmZg0KU2VwdGVtYmVyIDkNCkhpLCBZZXMgd2l0aCB2MThSNCwgdGhl
+IE9SREEgRGF0YSBNb2RlbCBDbGFzc2VzIGZ1bmN0aW9ucyBhcmUgZXhlY3V0ZWQgb24gdGhlIHNl
+cnZlci4gV2UgYXJlIHdvcmtpbmcgb24gYSB3YXkgdG8gcnVuIHRoZW0gbG9jYWxseSBvbiB0aGUg
+Y2xpZW50LiBCZSBhd2FyZSB0aGF0IGlmIHlvdSB3b3JrIHdpdGggYW4gZW50aXR5LCB3aGVuIGFu
+IGVudGl0eSBjbGFzcyBmdW5jdGlvbiBydW5zIChvbiB0aGUgc2VydmVyKSwgaXQgcmVjZWl2ZXMg
+YWxsIHRoZSB1cGRhdGVzIGRvbmUgb24gdGhlIGVudGl0eSBvbiB0aGUgY2xpZeKApg0KX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX18NCg0KVmlzaXQgVG9waWM8aHR0cHM6Ly9kaXNjdXNz
+LjRkLmNvbS90L29yZGEtZW50aXR5LWNsYXNzLWNvZGUtd2hlcmUtaXMtaXQtZXhlY3V0ZWQtaW4t
+NGQtc2VydmVyLWVudmlyb21lbnQtY2FuLWl0LWV4ZWN1dGUtb24tdGhlLWNsaWVudC8xNTM3Ni84
+PiBvciByZXBseSB0byB0aGlzIGVtYWlsIHRvIHJlc3BvbmQuDQoNCllvdSBhcmUgcmVjZWl2aW5n
+IHRoaXMgYmVjYXVzZSB5b3UgZW5hYmxlZCBtYWlsaW5nIGxpc3QgbW9kZS4NCg0KVG8gdW5zdWJz
+Y3JpYmUgZnJvbSB0aGVzZSBlbWFpbHMsIGNsaWNrIGhlcmU8aHR0cHM6Ly9kaXNjdXNzLjRkLmNv
+bS9lbWFpbC91bnN1YnNjcmliZS9jYzc1NjlkZTk4YThiNWYwNjQ5ZGNkZDIyMGE4OTFmOGJmZGU2
+OGQ0YjFhNjI0OGEzMWYwZDQzYjVlZjFiMmUxPi4NCg0KDQo=
+)
+A007 OK FETCH completed.
+
+31	2020-09-09T11:07:02.539	1	3	S < "A007 OK FETCH completed."
+32	2020-09-09T11:07:13.431	1	3	C > "A008 UID SEARCH CHARSET UTF-8 SUBJECT {6} 123456 "
+33	2020-09-09T11:07:13.435	1	3	S < "A008 NO [BADCHARSET (US-ASCII)] The specified charset is not supported."
+34	2020-09-09T11:07:26.271	1	3	C > "A009 CLOSE"
+35	2020-09-09T11:07:26.279	1	3	S < "A009 OK CLOSE completed."
+36	2020-09-09T11:07:26.279	1	3	C > "A010 LOGOUT"
+37	2020-09-09T11:07:26.284	1	3	S < "* BYE Microsoft Exchange Server 2016 IMAP4 server signing off."
+38	2020-09-09T11:07:26.284	1	3	### IMAP Connection closed
+12	2020-09-10T10:20:02.090	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+13	2020-09-10T10:20:02.114	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 g187mb24811956wmf"
+14	2020-09-10T10:20:02.114	1	4	C > "A001 CAPABILITY"
+15	2020-09-10T10:20:02.121	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+16	2020-09-10T10:20:02.121	1	4	S < "A001 OK Thats all she wrote! g187mb24811956wmf"
+17	2020-09-10T10:20:02.121	1	4	C > "A002 AUTHENTICATE PLAIN"
+18	2020-09-10T10:20:02.127	1	4	S < "+ "
+19	2020-09-10T10:20:02.128	1	4	C > "****************************************"
+20	2020-09-10T10:20:02.409	1	4	S < "A002 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)"
+21	2020-09-10T10:20:02.409	1	4	### IMAP Connection closed
+22	2020-09-10T10:20:06.187	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+23	2020-09-10T10:20:06.206	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 d125mb27173651wmc"
+24	2020-09-10T10:20:06.206	1	4	C > "A001 CAPABILITY"
+25	2020-09-10T10:20:06.213	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+26	2020-09-10T10:20:06.213	1	4	S < "A001 OK Thats all she wrote! d125mb27173651wmc"
+27	2020-09-10T10:20:06.213	1	4	C > "A002 AUTHENTICATE PLAIN"
+28	2020-09-10T10:20:06.219	1	4	S < "+ "
+29	2020-09-10T10:20:06.219	1	4	C > "****************************************"
+30	2020-09-10T10:20:06.343	1	4	S < "A002 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)"
+31	2020-09-10T10:20:06.344	1	4	### IMAP Connection closed
+32	2020-09-10T10:22:07.837	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+33	2020-09-10T10:22:07.869	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 s10mb24969977wmh"
+34	2020-09-10T10:22:07.870	1	4	C > "A001 CAPABILITY"
+35	2020-09-10T10:22:07.877	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+36	2020-09-10T10:22:07.877	1	4	S < "A001 OK Thats all she wrote! s10mb24969977wmh"
+37	2020-09-10T10:22:07.878	1	4	C > "A002 AUTHENTICATE PLAIN"
+38	2020-09-10T10:22:07.885	1	4	S < "+ "
+39	2020-09-10T10:22:07.885	1	4	C > "****************************************"
+40	2020-09-10T10:22:08.156	1	4	S < "A002 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)"
+41	2020-09-10T10:22:08.156	1	4	### IMAP Connection closed
+42	2020-09-10T10:23:01.822	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+43	2020-09-10T10:23:01.844	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 w1mb216528534wro"
+44	2020-09-10T10:23:01.844	1	4	C > "A001 CAPABILITY"
+45	2020-09-10T10:23:01.850	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+46	2020-09-10T10:23:01.850	1	4	S < "A001 OK Thats all she wrote! w1mb216528534wro"
+47	2020-09-10T10:23:01.850	1	4	C > "A002 AUTHENTICATE PLAIN"
+48	2020-09-10T10:23:01.857	1	4	S < "+ "
+49	2020-09-10T10:23:01.857	1	4	C > "****************************************"
+50	2020-09-10T10:23:02.156	1	4	S < "A002 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)"
+51	2020-09-10T10:23:02.156	1	4	### IMAP Connection closed
+52	2020-09-10T10:24:44.274	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+53	2020-09-10T10:24:44.293	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 q8mb263401835wra"
+54	2020-09-10T10:24:44.293	1	4	C > "A001 CAPABILITY"
+55	2020-09-10T10:24:44.300	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+56	2020-09-10T10:24:44.300	1	4	S < "A001 OK Thats all she wrote! q8mb263401835wra"
+57	2020-09-10T10:24:44.300	1	4	C > "A002 AUTHENTICATE PLAIN"
+58	2020-09-10T10:24:44.307	1	4	S < "+ "
+59	2020-09-10T10:24:44.307	1	4	C > "****************************************"
+60	2020-09-10T10:24:44.535	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+61	2020-09-10T10:24:44.535	1	4	### IMAP Connection closed
+62	2020-09-10T10:24:46.790	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+63	2020-09-10T10:24:46.809	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 q2mb106322456wru"
+64	2020-09-10T10:24:46.809	1	4	C > "A001 CAPABILITY"
+65	2020-09-10T10:24:46.816	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+66	2020-09-10T10:24:46.816	1	4	S < "A001 OK Thats all she wrote! q2mb106322456wru"
+67	2020-09-10T10:24:46.816	1	4	C > "A002 AUTHENTICATE PLAIN"
+68	2020-09-10T10:24:46.822	1	4	S < "+ "
+69	2020-09-10T10:24:46.822	1	4	C > "****************************************"
+70	2020-09-10T10:24:47.181	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+71	2020-09-10T10:24:47.181	1	4	### IMAP Connection closed
+72	2020-09-10T10:25:02.045	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+73	2020-09-10T10:25:02.064	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 l16mb147548844wru"
+74	2020-09-10T10:25:02.064	1	4	C > "A001 CAPABILITY"
+75	2020-09-10T10:25:02.071	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+76	2020-09-10T10:25:02.071	1	4	S < "A001 OK Thats all she wrote! l16mb147548844wru"
+77	2020-09-10T10:25:02.071	1	4	C > "A002 AUTHENTICATE PLAIN"
+78	2020-09-10T10:25:02.078	1	4	S < "+ "
+79	2020-09-10T10:25:02.078	1	4	C > "****************************************"
+80	2020-09-10T10:25:02.406	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+81	2020-09-10T10:25:02.407	1	4	### IMAP Connection closed
+82	2020-09-10T10:25:25.685	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+83	2020-09-10T10:25:25.704	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 g82mb24020824wma"
+84	2020-09-10T10:25:25.704	1	4	C > "A001 CAPABILITY"
+85	2020-09-10T10:25:25.711	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+86	2020-09-10T10:25:25.711	1	4	S < "A001 OK Thats all she wrote! g82mb24020824wma"
+87	2020-09-10T10:25:25.711	1	4	C > "A002 AUTHENTICATE PLAIN"
+88	2020-09-10T10:25:25.718	1	4	S < "+ "
+89	2020-09-10T10:25:25.718	1	4	C > "****************************************"
+90	2020-09-10T10:25:26.077	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+91	2020-09-10T10:25:26.077	1	4	### IMAP Connection closed
+92	2020-09-10T10:26:12.165	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+93	2020-09-10T10:26:12.196	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 g5mb277591079wrx"
+94	2020-09-10T10:26:12.197	1	4	C > "A001 CAPABILITY"
+95	2020-09-10T10:26:12.203	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+96	2020-09-10T10:26:12.204	1	4	S < "A001 OK Thats all she wrote! g5mb277591079wrx"
+97	2020-09-10T10:26:12.204	1	4	C > "A002 AUTHENTICATE PLAIN"
+98	2020-09-10T10:26:12.210	1	4	S < "+ "
+99	2020-09-10T10:26:12.210	1	4	C > "****************************************"
+100	2020-09-10T10:26:12.396	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+101	2020-09-10T10:26:12.397	1	4	### IMAP Connection closed
+102	2020-09-10T10:26:39.279	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+103	2020-09-10T10:26:39.306	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 r15mb158900107wrv"
+104	2020-09-10T10:26:39.306	1	4	C > "A001 CAPABILITY"
+105	2020-09-10T10:26:39.313	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+106	2020-09-10T10:26:39.313	1	4	S < "A001 OK Thats all she wrote! r15mb158900107wrv"
+107	2020-09-10T10:26:39.313	1	4	C > "A002 AUTHENTICATE PLAIN"
+108	2020-09-10T10:26:39.320	1	4	S < "+ "
+109	2020-09-10T10:26:39.320	1	4	C > "****************************************"
+110	2020-09-10T10:26:39.649	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+111	2020-09-10T10:26:39.650	1	4	### IMAP Connection closed
+112	2020-09-10T10:28:23.134	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+113	2020-09-10T10:28:23.152	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 z129mb17344541wme"
+114	2020-09-10T10:28:23.153	1	4	C > "A001 CAPABILITY"
+115	2020-09-10T10:28:23.159	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+116	2020-09-10T10:28:23.159	1	4	S < "A001 OK Thats all she wrote! z129mb17344541wme"
+117	2020-09-10T10:28:23.159	1	4	C > "A002 AUTHENTICATE PLAIN"
+118	2020-09-10T10:28:23.166	1	4	S < "+ "
+119	2020-09-10T10:28:23.166	1	4	C > "****************************************"
+120	2020-09-10T10:28:23.493	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+121	2020-09-10T10:28:23.494	1	4	### IMAP Connection closed
+122	2020-09-10T10:28:26.117	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+123	2020-09-10T10:28:26.136	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 17mb22869041wmf"
+124	2020-09-10T10:28:26.136	1	4	C > "A003 CAPABILITY"
+125	2020-09-10T10:28:26.142	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+126	2020-09-10T10:28:26.142	1	4	S < "A003 OK Thats all she wrote! 17mb22869041wmf"
+127	2020-09-10T10:28:26.143	1	4	C > "A004 AUTHENTICATE PLAIN"
+128	2020-09-10T10:28:26.149	1	4	S < "+ "
+129	2020-09-10T10:28:26.149	1	4	C > "****************************************"
+130	2020-09-10T10:28:26.465	1	4	S < "A004 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+131	2020-09-10T10:28:26.466	1	4	### IMAP Connection closed
+132	2020-09-10T10:28:49.882	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+133	2020-09-10T10:28:49.901	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 c3mb205130596wrc"
+134	2020-09-10T10:28:49.901	1	4	C > "A001 CAPABILITY"
+135	2020-09-10T10:28:49.908	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+136	2020-09-10T10:28:49.908	1	4	S < "A001 OK Thats all she wrote! c3mb205130596wrc"
+137	2020-09-10T10:28:49.908	1	4	C > "A002 AUTHENTICATE PLAIN"
+138	2020-09-10T10:28:49.915	1	4	S < "+ "
+139	2020-09-10T10:28:49.915	1	4	C > "****************************************"
+140	2020-09-10T10:28:50.229	1	4	S < "A002 NO [ALERT] Your account is not enabled for IMAP use. Please visit your Gmail settings page and enable your account for IMAP access. (Failure)"
+141	2020-09-10T10:28:50.230	1	4	### IMAP Connection closed
+142	2020-09-10T10:53:14.182	1	4	### IMAP Connected to 'imap.gmail.com' on port 993. (secured)
+143	2020-09-10T10:53:14.202	1	4	S < "* OK Gimap ready for requests from 195.68.52.79 k64mb13960330wmb"
+144	2020-09-10T10:53:14.203	1	4	C > "A001 CAPABILITY"
+145	2020-09-10T10:53:14.209	1	4	S < "* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER AUTH=XOAUTH"
+146	2020-09-10T10:53:14.209	1	4	S < "A001 OK Thats all she wrote! k64mb13960330wmb"
+147	2020-09-10T10:53:14.210	1	4	C > "A002 AUTHENTICATE PLAIN"
+148	2020-09-10T10:53:14.218	1	4	S < "+ "
+149	2020-09-10T10:53:14.218	1	4	C > "****************************************"
+150	2020-09-10T10:53:14.409	1	4	S < "A002 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)"
+151	2020-09-10T10:53:14.409	1	4	### IMAP Connection closed
+1	2020-09-16T15:48:23.509	3	5	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+2	2020-09-16T15:48:23.509	3	5	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+3	2020-09-16T15:48:23.509	3	5	### IMAP is not allowed to connect to unsecured server: 'exchange.4d.com' on port 143
+4	2020-09-16T15:48:23.509	3	5	### IMAP Connection closed
+5	2020-09-16T15:48:41.535	3	5	### IMAP Connected to 'exchange.4d.com' on port 993. (secured)
+6	2020-09-16T15:48:42.125	3	5	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+7	2020-09-16T15:48:42.126	3	5	C > "A001 LOGIN ************************ ********"
+8	2020-09-16T15:48:42.307	3	5	S < "A001 OK LOGIN completed."
+9	2020-09-16T15:49:10.951	3	5	C > "A002 LOGOUT"
+10	2020-09-16T15:49:10.955	3	5	S < "* BYE Microsoft Exchange Server 2016 IMAP4 server signing off."
+11	2020-09-16T15:49:10.955	3	5	### IMAP Connection closed
+1	2020-09-16T15:50:26.969	3	4	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+2	2020-09-16T15:50:26.969	3	4	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+3	2020-09-16T15:50:26.969	3	4	C > "A001 CAPABILITY"
+4	2020-09-16T15:50:26.972	3	4	S < "* CAPABILITY IMAP4 IMAP4rev1 LOGINDISABLED STARTTLS AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+5	2020-09-16T15:50:26.972	3	4	S < "A001 OK CAPABILITY completed."
+6	2020-09-16T15:50:26.973	3	4	C > "A002 STARTTLS"
+7	2020-09-16T15:50:26.976	3	4	S < "A002 OK Begin TLS negotiation now."
+8	2020-09-16T15:50:26.976	3	4	### IMAP Encrypted TLS session started.
+9	2020-09-16T15:50:27.012	3	4	C > "A003 CAPABILITY"
+10	2020-09-16T15:50:27.015	3	4	S < "* CAPABILITY IMAP4 IMAP4rev1 AUTH=PLAIN AUTH=NTLM AUTH=GSSAPI SASL-IR UIDPLUS MOVE ID UNSELECT CHILDREN IDLE NAMESPACE LITERAL+"
+11	2020-09-16T15:50:27.015	3	4	S < "A003 OK CAPABILITY completed."
+12	2020-09-16T15:50:27.015	3	4	C > "A004 AUTHENTICATE PLAIN"
+13	2020-09-16T15:50:27.018	3	4	S < "+ "
+14	2020-09-16T15:50:27.018	3	4	C > "************************************************"
+15	2020-09-16T15:50:27.633	3	4	S < "A004 OK AUTHENTICATE completed."
+16	2020-09-16T15:50:43.334	3	4	C > "A005 LOGOUT"
+17	2020-09-16T15:50:43.337	3	4	S < "* BYE Microsoft Exchange Server 2016 IMAP4 server signing off."
+18	2020-09-16T15:50:43.337	3	4	### IMAP Connection closed
+1	2020-09-17T16:16:13.986	3	5	### IMAP Connected to 'exchange.4d.com' on port 143. (unsecured)
+2	2020-09-17T16:16:13.986	3	5	S < "* OK The Microsoft Exchange IMAP4 service is ready."
+3	2020-09-17T16:16:13.986	3	5	### IMAP is not allowed to connect to unsecured server: 'exchange.4d.com' on port 143
+4	2020-09-17T16:16:13.986	3	5	### IMAP Connection closed
